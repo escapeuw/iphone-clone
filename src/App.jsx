@@ -1,12 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import './assets/sky.jpeg'
+import { useState } from 'react';
+import './App.css';
+import '../src/assets/sky.jpeg';
 import Calculator from './calculator/calculator.jsx';
 import Weather from './weather/weather.jsx';
 import YouTube from './youtube/youtube.jsx'
-import React from 'react'
+import React from 'react';
+import msg from "./assets/messageicon.png";
+import appstore from "./assets/appstoreicon.png";
+import photo from "./assets/photo.png";
+import safari from "./assets/safari.png";
+import calc from "./assets/calculator.png";
+import notes from "./assets/notes.png";
+import calender from "./assets/calender.png";
+import cam from "./assets/camera.png";
+import setting from "./assets/setting.png";
+import map from "./assets/map.png";
+import mail from "./assets/mail.png";
+import weat from "./assets/weather.png";
+import clock from "./assets/clock.png";
+import stocks from "./assets/stock.png";
+import music from "./assets/music.jpeg";
+import yout from "./assets/youtube.png";
+import pho from "./assets/phone.png";
+import insta from "./assets/instagram.jpeg";
+import wallet from "./assets/wallet.png";
+
 
 
 const date = new Date();
@@ -86,71 +104,71 @@ function Apps(props) {
     return(
       <div>
         <div className="appContainer">
-              <div className="imgText"><img src="./src/assets/messageicon.png" />
+              <div className="imgText"><img src={msg} />
                 Messages
               </div>
               <div className="imgText">
-              <img src="./src/assets/appstoreicon.png" />
+              <img src={appstore} />
                 AppStore
               </div>
               <div className="imgText">
-              <img src="./src/assets/photo.png" />
+              <img src={photo} />
                 Photos
               </div>
               <div className="imgText">
-            <img src="./src/assets/safari.png" />
+            <img src={safari} />
                 Safari
               </div>
               <div className="imgText">
-            <img onClick={props.calculator} src="./src/assets/calculator.png" />
+            <img onClick={props.calculator} src={calc} />
                 Calculator
               </div>
               <div className="imgText">
-            <img onClick={props.notes} src="./src/assets/notes.png" />
+            <img onClick={props.notes} src={notes} />
                 Notes
               </div>
               <div className="imgText">
-            <img src="./src/assets/calender.png" />
+            <img src={calender} />
                 Calender
               </div>
               <div className="imgText">
-            <img src="./src/assets/camera.png" />
+            <img src={cam} />
                 Camera
               </div>
               <div className="imgText">
-            <img src="./src/assets/setting.png" />
+            <img src={setting} />
                 Settings
               </div>
               <div className="imgText">
-            <img src="./src/assets/map.png" />
+            <img src={map} />
                 Maps
               </div>
               <div className="imgText">
-            <img src="./src/assets/mail.png" />
+            <img src={mail} />
                 Mail
               </div>
               <div className="imgText">
-            <img onClick={props.weather} src="./src/assets/weather.png" />
+            <img onClick={props.weather} src={weat} />
                 Weather
               </div>
               <div className="imgText">
-            <img src="./src/assets/clock.png" />
+            <img src={clock} />
                 Clock
               </div>
               <div className="imgText">
-            <img src="./src/assets/stock.png" />
+            <img src={stocks} />
                 Stocks
               </div>
               <div className="imgText">
-                <img src="./src/assets/wallet.png" />
+                <img src={wallet} />
                 Wallet
               </div>
             </div>
             <div className="dockContainer appContainer">
-              <img src="./src/assets/music.jpeg" />
-              <img src="./src/assets/youtube.png" onClick={props.youtube} />
-              <img src="./src/assets/phone.png" onClick={props.phonecall} />
-              <img src="./src/assets/instagram.jpeg" />
+              <img src={music} />
+              <img src={yout} onClick={props.youtube} />
+              <img src={pho} onClick={props.phonecall} />
+              <img src={insta} />
             </div>
       </div>)
 }

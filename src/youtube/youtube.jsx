@@ -3,6 +3,13 @@ import './youtube.css'
 import { useState } from "react";
 import { useEffect } from 'react';
 import moment from 'moment'
+import homeclicked from '../assets/homeClicked.png';
+import home from '../assets/home.png';
+import shortsclicked from '../assets/shortsClicked.png';
+import short from '../assets/shorts.png';
+import subsclicked from '../assets/subsClicked.png';
+import subs from '../assets/subs.png';
+import ytlogo from '../assets/ytlogo.png';
 
 const API = 'AIzaSyAzrJl-vTFKi4Npzq7jZWQMl6C0_7N7Jyg';
 
@@ -52,7 +59,7 @@ function YouTube() {
     function navbar() {
         return (
             <div className='navbar'>
-                <img onClick={() => setDock("home")} className='ytlogo' src='./src/assets/ytlogo.png' alt='logo' />
+                <img onClick={() => setDock("home")} className='ytlogo' src={ytlogo} alt='logo' />
                 <div className='inputContainer'><input placeholder='Search' onChange={handleSearch}
                     onKeyDown={e => {
                         if (e.code === "Enter") {
@@ -174,22 +181,22 @@ function YouTube() {
             <div className='dock'>
                 <div onClick={() => setDock("home")} className='dockBlocks'>
                     {(dock === 'home')
-                        ? <img className='dockIcon' src='./src/assets/homeClicked.png' alt='clicked' />
-                        : <img className='dockIcon' src='./src/assets/home.png' alt='notclikcked' />} Home
+                        ? <img className='dockIcon' src={homeclicked} alt='clicked' />
+                        : <img className='dockIcon' src={home} alt='notclikcked' />} Home
                 </div>
                 <div onClick={() => {
                     fetchSearchData(shorts_url);
                     setDock("shorts")
                 }} className='dockBlocks'>
                     {(dock === 'shorts')
-                        ? <img className='dockIcon' src='./src/assets/shortsClicked.png' alt='clicked' />
-                        : <img className='dockIcon' src='./src/assets/shorts.png' alt='notclikcked' />} Shorts
+                        ? <img className='dockIcon' src={shortsclicked} alt='clicked' />
+                        : <img className='dockIcon' src={short} alt='notclikcked' />} Shorts
                 </div>
                 <div className='dockBlocksMid'>+</div>
                 <div onClick={() => setDock("subs")} className='dockBlocks'>
                     {(dock === 'subs')
-                        ? <img className='dockIcon' src='./src/assets/subsClicked.png' alt='clicked' />
-                        : <img className='dockIcon' src='./src/assets/subs.png' alt='notclikcked' />} Subscription
+                        ? <img className='dockIcon' src={subsclicked} alt='clicked' />
+                        : <img className='dockIcon' src={subs} alt='notclikcked' />} Subscription
                 </div>
                 <div className='dockBlocks'>You</div>
             </div>
